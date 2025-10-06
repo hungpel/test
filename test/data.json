@@ -1,0 +1,11 @@
+[
+  { "icon": "vietnam.svg", "title": "Schema" },
+  { "icon": "logo-likepion-light.svg", "title": "Nội dung AI" },
+  { "icon": "vietnam.svg", "title": "Geotag hình ảnh" },
+  { "icon": "logo-likepion-light.svg", "title": "Content spin" },
+  { "icon": "logo-likepion-light.svg", "title": "Kiểm tra index" },
+  { "icon": "logo-likepion-light.svg", "title": "Lọc tên miền" },
+  { "icon": "vietnam.svg", "title": "Kiểm tra email" },
+  { "icon": "logo-likepion-light.svg", "title": "Lấy mã code 2FA" },
+  { "icon": "vietnam.svg", "title": "Kiểm tra links" }
+]
