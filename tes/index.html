@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test js</title>
+</head>
+<body>
+
+    <h2>My todo list</h2>
+    <button id="reload-btn">Tải lại dữ liệu</button>
+    <ul id="todo-list"></ul>
+
+    <input type="text" placeholder="Add username" id="add-username">
+    <button id="send-btn">Gửi</button>
+
+    <script>
+        const todoList = document.getElementById("todo-list");
+        const reloadBtn = document.getElementById("reload-btn");
+
+        const addUsername = document.getElementById("add-username");
+        const sendBtn = document.getElementById("send-btn");
+
+        async function fetchTodos() {
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=5");
+                const todos = await res.json();
+
+                todoList.innerHTML = "";
+                todos.forEach(todo => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                        <input type="checkbox" ${todo.completed  ? "checked" : ""}>
+                        ${todo.title}
+                    `
+                    todoList.appendChild(li);
+                });
+            } catch (err) {
+                console.log("Lỗi: ", err);
+            }
+        }
+        fetchTodos();
+
+        reloadBtn.addEventListener('click', fetchTodos);
+
+        sendBtn.addEventListener('click', async () =>  {
+            const name = addUsername.value.trim();
+            if(!name) {
+                alert("Vui lòng nhập tên!");
+                return;
+            }
+
+            try {
+                const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({name}),
+                });
+
+                const data = await res.json();
+                console.log("Phản hồi từ server: ", data);
+                alert("Đã gửi thành công! Xem kết quả trong console.");
+                addUsername.value = "";
+            } catch  (err) {
+                console.error("Lỗi khi gửi dữ liệu:", err);
+            }
+            
+        });
+
+    </script>
+
+
+
+
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+    <!-- <h2>Danh sách người dùng</h2>
+    <table border="1" cellspacing="0" cellpadding=""8>
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Thành phố</th>
+            </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+    </table>
+
+    <script>
+        async function loadUser() {
+            try {
+                const res = await fetch('https://jsonplaceholder.typicode.com/users');
+                const users = await res.json();
+                
+                const tbody = document.getElementById('userTable');
+                tbody.innerHTML = users.map(
+                    (u) => 
+                    `
+                        <tr> 
+                            <td>${u.name}</td>
+                            <td>${u.email}</td>
+                            <td>${u.address.city}</td>
+                        </tr>
+                    `
+                ).join("");
+            }  catch (e)  {
+                console.error("Lỗi khi load:", err);
+            }
+        }
+
+        loadUser();
+
+
+    </script> -->
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <!-- <h2>Danh sách bài viết</h2>
+    <ul id="posts"></ul>
+
+
+    <script>
+        async function loadPosts() {
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
+            const posts = await res.json();
+
+
+            const list = document.getElementById("posts");
+
+            list.innerHTML = posts.map(
+                (p) =>
+                    `<li> 
+                        <h4>${p.id} : ${p.title}</h4>
+                        <p>${p.body}</p>
+                    </li>`
+            ).join("");
+        }
+
+        loadPosts();
+
+
+
+        async function addPost() {
+            const newPost = {
+                title: "Bài viết mới",
+                body: "Đây là nội dung bài viết",
+                userId: 1,
+            };
+
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newPost),
+            });
+
+            const data = await res.json();
+            console.log("Server trả về:", data);
+        }
+
+        addPost();
+
+        // method: "POST" → gửi dữ liệu thay vì GET.
+        // headers → báo cho server biết kiểu dữ liệu gửi lên (JSON).
+        // body → dữ liệu bạn gửi (phải stringify trước).
+
+
+
+        // async function getData() {
+        //     try {
+        //         const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
+        //         if (!res.ok) {
+        //         throw new Error("Lỗi mạng hoặc URL không đúng!");
+        //         }
+        //         const data = await res.json();
+        //         console.log("Dữ liệu nhận được:", data);
+        //     } catch (err) {
+        //         console.error("Lỗi khi fetch:", err.message);
+        //     }
+        // }
+
+        // getData();
+
+    </script>  -->
+
+
+
+
+    <!-- ----------------------------------------- -->
+    <!-- <ul id="list">
+
+    </ul>
+    <input id="add" placeholder="Enter what u want to add...">
+    <button id="btn">Thêm</button>
+
+    <script>
+        const list = document.getElementById('list');
+        const input = document.getElementById('add');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            const text = input.value.trim();
+            if (!text) return alert('Bạn chưa nhập nội dung!');
+
+            const li = document.createElement('li');
+            li.innerText = text;
+            list.appendChild(li)
+
+            input.value = '';
+            input.focus();
+        });
+    </script> -->
+
+    
+
+    <!-- ------------------------------------- -->
+    <!-- <form action="" id="form">
+        <input type="text" id="nameButton" placeholder="Enter ur name">
+        <button id="btn">Hiiiii</button>
+    </form>
+    <p id="greet"></p>
+    <script>
+        const form = document.getElementById('form');
+        const input = document.getElementById('nameButton');
+        const greet = document.getElementById('greet');
+
+        form.addEventListener('submit', (e) => {
+            // e.preventDefault();
+            const name = input.value.trim();
+            if (name) {
+                greet.innerText = `Say hi to ${name}`;
+            } else {
+                greet.innerText = `Say hi anonymous`;
+            }
+        })
+    </script> -->
+
+    <!-- ---------------------------------------  -->
+    <!-- <button id="redBtn" style="background-color: red;">Red</button>
+    <button id="blueBtn" style="background-color: blue;">Blue</button>
+    <button id="yellowBtn" style="background-color: yellow;">Yellow</button>
+
+
+    <script>
+        const redBtn = document.getElementById('redBtn');
+        const blueBtn = document.getElementById('blueBtn');
+        const yellowBtn = document.getElementById('yellowBtn');
+
+        redBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = "red";
+        })
+
+        blueBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'blue';
+        })
+
+        yellowBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'yellow';
+        })
+
+
+    </script> -->
+
+
+    <!-- ------------------------------------------------ -->
+    <!-- <h1 id="title">Xin chào</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name:">
+    <button id="btn">Update</button>
+
+
+    
+    <p id="count">0</p>
+    <button id="addButton">Add</button>
+
+    <script>
+        const title = document.getElementById('title');
+        const input = document.getElementById('nameInput');
+        const btn = document.getElementById('btn');
+        
+        console.log(btn)
+        console.log(btn.innerHTML)
+
+        btn.addEventListener('click', () => {
+            const name = input.value.trim();
+            title.innerText = name ? `Xin chào, ${name}!` : 'Xin chào!';
+        });
+
+        const addBtn = document.getElementById('addButton');
+        const countEl = document.getElementById('count')
+        addBtn.addEventListener('click', () => {
+            let pCount = parseInt(countEl.innerText);
+            countEl.innerText = pCount + 1;
+
+            console.log(countEl);
+            console.log('aaa');
+            console.log(pCount);
+        }); -->
+
+        
+    </script>
+</body>
+</html>
