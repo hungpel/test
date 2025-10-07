@@ -12,9 +12,9 @@
             <img src="/test/logo-likepion-light.svg" alt="company_logo" class="px-3 h-8">
         </div>
         <div class="basis-sm flex flex-row justify-end items-center">
-            <div class="p-3 font-medium text-gray-500">Trang chủ</div>
-            <div class="px-3 py-2 mr-2 bg-blue-100 border-0 rounded-4xl font-medium text-blue-500">Đăng nhập</div>
-            <button class="bg-blue-100 text-blue-500 p-3 rounded-full hover:bg-blue-200 transition">
+            <a href="#" class="p-3 font-medium text-gray-500 hover:text-blue-400">Trang chủ</a>
+            <a href="." class="px-3 py-2 mr-2 bg-blue-100 border-0 rounded-4xl font-medium text-blue-500">Đăng nhập</a>
+            <button id="dark-toggle" class="bg-blue-100 text-blue-500 p-3 rounded-full hover:bg-blue-200 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414m0-13.414L6.05 6.05m11.314 11.314l1.414 1.414M12 8a4 4 0 100 8 4 4 0 000-8z" />
@@ -56,16 +56,22 @@
                 <div>
                     <ul class="mb-2">
                         <li class="flex items-center gap-2 text-gray-700 p-1 pl-3">
-                            <span>✨</span>
-                            <span>Content Spin</span>
+                            <a href="#" class="hover:text-blue-500">
+                                <span>✨</span>
+                                <span>Content Spin</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-2 text-gray-700 p-1 pl-3">
-                            <span>🔍</span>
-                            <span>Kiểm tra Index</span>
+                            <a href="#" class="hover:text-blue-500">
+                                <span>🔍</span>
+                                <span>Kiểm tra Index</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-2 text-gray-700 p-1 pl-3">
-                            <span>📍</span>
-                            <span>Geotag hình ảnh</span>
+                            <a href="#" class="hover:text-blue-500">
+                                <span>📍</span>
+                                <span>Geotag hình ảnh</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -82,20 +88,21 @@
                 const grid = document.getElementById('tools-grid');
                 tools.forEach(tool => {
                     const div = document.createElement('div');
-                    div.className = "p-4 m-2 border border-gray-200 border-l-3 border-l-blue-400 rounded-md flex flex-col items-center";
+                    div.className = "p-4 m-2 border border-gray-200 border-l-3 border-l-blue-400 rounded-md flex flex-col items-center hover:-translate-y-1 transition-transform shadow hover:shadow-lg transition-shadow";
                     div.innerHTML = `
-                        <img src="${tool.icon}" alt="${tool.title}" class="w-12 h-12 mb-2" />
-                        <p class="font-medium text-gray-700">${tool.title}</p>
+                        <a href="#" class="flex flex-col items-center justify-center">
+                            <img src="${tool.icon}" alt="${tool.title}" class="w-12 h-12 mb-2" />
+                            <p class="font-medium text-gray-700">${tool.title}</p>
+                        </a>
                     `;
                     grid.appendChild(div);
                 });
-            } catch (err) {
-                console.error("Lỗi load data:", err);
+            } catch (e) {
+                console.error("Lỗi load data:", e);
             }
         }
 
         loadTools();
-
     </script>
 </body>
 </html>
