@@ -1,101 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/monobite/css/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <!-- TOP BAR -->
-    <div id="topbar" class="bg-red-600 text-white text-sm px-4 py-2 flex justify-between items-center">
-        <span>Miễn phí vận chuyển cho đơn hàng trên 200k</span>
-        <div class="flex items-center space-x-4 text-sm">
-            <span>1073/23 Cách Mạng Tháng 8, P.7, Q.Tân Bình, TP.HCM</span>
-            <a href="#"><i class="">icon-fb</i></a>
-            <a href="#"><i class="">icon-chim</i></a>
-        </div>
+  </head>
+  <body>
+    <!-- Top -->
+    <div
+      id="topbar"
+      class="bg-red-600 text-white text-sm px-4 py-2 flex justify-between items-center"
+    >
+      <span class="">Miễn phí vận chuyển cho đơn hàng trên 200k</span>
+      <div class="flex items-center space-x-4 text-sm">
+        <span>1073/23 Cách Mạng Tháng 8, P.7, Q.Tân Bình, TP.HCM</span>
+        <a href="#"><i class="">icon-fb</i></a>
+        <a href="#"><i class="">icon-chim</i></a>
+      </div>
     </div>
 
-    <header id="navbar" class="bg-[#010f1c] text-white sticky top-0 z-50 shadow">
-        <div class="mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold flex items-center">
-                <img src="/monobite/logo-white.svg" alt="logo" class="h-10 mr-2" />
-            </div>
-
-            <nav class="hidden md:flex space-x-6 font-semibold uppercase text-sm">
-                <a href="#" class="hover:text-red-500">Trang chủ</a>
-                <a href="#" class="hover:text-red-500">Giới thiệu</a>
-                <a href="#" class="hover:text-red-500">Sản phẩm</a>
-                <a href="#" class="hover:text-red-500">Tin tức</a>
-                <a href="#" class="hover:text-red-500">Liên hệ</a>
-            </nav>
-
-            <div class="flex items-center space-x-4">
-                <div id="hero-info" class="flex flex-row items-center border-r">
-                    <div>
-                        <img src="/monobite/phone-call.svg" alt="phone-icon">
-                    </div>
-                    <div class="flex flex-col px-3">
-                        <span class="text-[#4d5765] font-semibold">Gọi ngay:</span>
-                        <span class="font-bold">(+84) 0313-728-397</span>
-                    </div>
-                </div>
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                    </svg>
-                </button>
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                    </svg>
-                </button>
-                <button class="relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                    </svg>
-                    <span class="absolute -top-2 -right-2 text-xs bg-red-600 rounded-full px-1">0</span>
-                </button>
-                <button class="flex flex-row bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-semibold">
-                    <span>Đặt hàng ngay</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-                        <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+    <!-- Main nav -->
+    <header
+      id="navbar"
+      class="bg-[#010f1c] text-white sticky top-0 z-50 shadow"
+    >
+      <div class="mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="text-2xl font-bold flex items-center">
+          <img
+            src="/monobite/assets/img/scapbot-favicon.webp"
+            alt="logo"
+            class="h-10 mr-2"
+          />
         </div>
+
+        <nav class="hidden md:flex space-x-6 font-semibold uppercase text-sm">
+          <a href="#" class="hover:text-red-500">Trang chủ</a>
+          <a href="#" class="hover:text-red-500">Giới thiệu</a>
+          <a href="#" class="hover:text-red-500">Sản phẩm</a>
+          <a href="#" class="hover:text-red-500">Tin tức</a>
+          <a href="#" class="hover:text-red-500">Liên hệ</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <div id="hero-info" class="flex flex-row items-center border-r">
+            <div>
+              <img
+                src="/monobite/assets/icon/phone-call.svg"
+                alt="phone-icon"
+              />
+            </div>
+            <div class="flex flex-col px-3">
+              <span class="text-[#4d5765] font-semibold">Gọi ngay:</span>
+              <span class="font-bold">(+84) 0313-728-397</span>
+            </div>
+          </div>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </button>
+          <button class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+              />
+            </svg>
+            <span
+              class="absolute -top-2 -right-2 text-xs bg-red-600 rounded-full px-1"
+              >0</span
+            >
+          </button>
+          <button
+            class="flex flex-row bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-semibold"
+          >
+            <span>Đặt hàng ngay</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <section class="bg-blue-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">NƠI TIN CẬY CHO ĐỒ ĂN NHANH CHẤT LƯỢNG</div>
+    <!-- Top Slider -->
+    <section
+      id="first-section"
+      class="relative w-full overflow-hidden shadow-2xl bg-center bg-cover bg-[url('/monobite/assets/img/scapbot-cover.webp')]"
+    >
+      <div class="pt-[40%] sm:pt-[30%] md:pt-[25%] lg:pt-[22%]"></div>
+
+      <div
+        id="top-slides"
+        class="relative h-full flex transition-transform duration-700 ease-in-out"
+      >
+        <div
+          class="w-full flex-shrink-0 flex flex-col items-center text-white text-center justify-center"
+        >
+          <h2 class="text-3xl font-bold mb-1 mt-4 text-blue-400">
+            THƯỞNG THỨC MÓN NGON CÙNG GIA ĐÌNH
+          </h2>
+          <button
+            class="mt-4 px-4 py-2 bg-red-600 hover:bg-white-700 rounded-sm"
+          >
+            Xem menu
+          </button>
+        </div>
+        <div
+          class="w-full flex-shrink-0 flex flex-col items-center text-white text-center justify-center"
+        >
+          <h2 class="text-3xl font-bold mb-1 mt-4 text-blue-400">
+            MỖI NGÀY MỘT HƯƠNG VỊ
+          </h2>
+          <button
+            class="mt-4 px-4 py-2 bg-red-600 hover:bg-white-700 rounded-sm"
+          >
+            Xem menu
+          </button>
+        </div>
+        <div
+          class="w-full flex-shrink-0 flex flex-col items-center text-white text-center justify-center"
+        >
+          <h2 class="text-3xl font-bold mb-1 mt-4 text-blue-400">
+            HẠNH PHÚC BẮT ĐẦU TỪ BỮA ĂN
+          </h2>
+          <button
+            class="mt-4 px-4 py-2 bg-red-600 hover:bg-white-700 rounded-sm"
+          >
+            Xem menu
+          </button>
+        </div>
+      </div>
+
+      <button
+        id="top-prev"
+        class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/60 hover:bg-white/80 text-gray-800 p-2 rounded-full"
+      >
+        ‹
+      </button>
+      <button id="top-next" class="">›</button>
     </section>
-    <section class="bg-red-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Khám phá những món ăn được yêu thích nhất !</div>
+
+    <!-- Second section -->
+    <section id="second-section" class="flex justify-center items-center py-10">
+      <div
+        class="basis-3/5 bg-white-200 h-full flex items-center justify-center"
+      >
+        <img src="/monobite/assets/img/images.jpg" alt="scapbot-img" class="" />
+      </div>
+      <div class="basis-2/5 pl-10 pr-2 flex flex-col pb-4">
+        <div>
+          <h2 class="font-bold text-3xl pb-2">
+            NƠI TIN CẬY CHO ĐỒ ĂN NHANH CHẤT LƯỢNG
+          </h2>
+          <p class="py-4">
+            Chúng tôi cam kết mang đến cho bạn những món ăn nhanh ngon miệng,
+            tươi ngon và giá cả hợp lý. Từ những món ăn kinh điển đến hương vị
+            mới lạ, mỗi miếng ăn đều là một trải nghiệm thú vị.
+          </p>
+        </div>
+        <div class="flex flex-row">
+          <div class="flex-1">
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="aaa"
+              class="w-10"
+            />
+            <span><b>NGON MIỆNG</b></span>
+          </div>
+          <div class="flex-1">
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="aaa"
+              class="w-10"
+            />
+            <span class="uppercase"><b>Tươi ngon</b></span>
+          </div>
+          <div class="flex-1">
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="aaa"
+              class="w-10"
+            />
+            <span class="uppercase"><b>Giá tốt</b></span>
+          </div>
+        </div>
+        <button
+          class="mt-4 px-4 py-2 w-[150px] bg-red-600 hover:bg-black text-white rounded-sm mb-2"
+        >
+          Khám phá
+        </button>
+      </div>
     </section>
-    <section class="bg-yellow-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Thưởng thức những hương vị đặc sắc nhất từ thực đơn của chúng tôi!</div>
+
+    <!-- Best Seller Slider -->
+    <section
+      id="bestseller"
+      class="relative w-full overflow-hidden shadow-2xl bg-center bg-cover pb-10"
+    >
+      <div class="flex justify-center py-10">
+        <h1 class="font-medium text-3xl uppercase w-1/2 text-center">
+          Khám phá những món ăn được yêu thích nhất !
+        </h1>
+      </div>
+
+      <div
+        id="bestseller-slides"
+        class="relative h-full flex transition-transform duration-700 ease-in-out"
+      >
+        <div class="w-1/3 flex-shrink-0">
+          <div
+            class="bg-gray-100 m-5 p-4 flex-shrink-0 flex flex-col items-center text-white text-center justify-center group/parent rounded-md border hover:border-red-500"
+          >
+            <div class="relative hidden w-full group-hover/parent:block">
+              <div class="absolute right-14 text-black">
+                <div class="flex flex-col items-end">
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Xem nhanh</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H3m4 8l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Thêm vào giỏ hàng</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Yêu thích</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="food-img"
+              class="w-1/2 py-5"
+            />
+            <h2 class="text-xl text-black font-semibold mb-1 py-2">
+              Mì xào mắm tỏi 1
+            </h2>
+            <p class="text-black pb-1">American-inspired susihi roll</p>
+            <span class="text-xl font-bold text-red-500 pb-5">270,000đ</span>
+          </div>
+        </div>
+        <div class="w-1/3 flex-shrink-0">
+          <div
+            class="bg-gray-100 m-5 p-4 flex-shrink-0 flex flex-col items-center text-white text-center justify-center group/parent rounded-md border hover:border-red-500"
+          >
+            <div class="relative hidden w-full group-hover/parent:block">
+              <div class="absolute right-14 text-black">
+                <div class="flex flex-col items-end">
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Xem nhanh</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H3m4 8l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Thêm vào giỏ hàng</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Yêu thích</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="food-img"
+              class="w-1/2 py-5"
+            />
+            <h2 class="text-xl text-black font-semibold mb-1 py-2">
+              Mì xào mắm tỏi 2
+            </h2>
+            <p class="text-black pb-1">American-inspired susihi roll</p>
+            <span class="text-xl font-bold text-red-500 pb-5">270,000đ</span>
+          </div>
+        </div>
+        <div class="w-1/3 flex-shrink-0">
+          <div
+            class="bg-gray-100 m-5 p-4 flex-shrink-0 flex flex-col items-center text-white text-center justify-center group/parent rounded-md border hover:border-red-500"
+          >
+            <div class="relative hidden w-full group-hover/parent:block">
+              <div class="absolute right-14 text-black">
+                <div class="flex flex-col items-end">
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Xem nhanh</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H3m4 8l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Thêm vào giỏ hàng</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Yêu thích</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="food-img"
+              class="w-1/2 py-5"
+            />
+            <h2 class="text-xl text-black font-semibold mb-1 py-2">
+              Mì xào mắm tỏi 3
+            </h2>
+            <p class="text-black pb-1">American-inspired susihi roll</p>
+            <span class="text-xl font-bold text-red-500 pb-5">270,000đ</span>
+          </div>
+        </div>
+        <div class="w-1/3 flex-shrink-0">
+          <div
+            class="bg-gray-100 m-5 p-4 flex-shrink-0 flex flex-col items-center text-white text-center justify-center group/parent rounded-md border hover:border-red-500"
+          >
+            <div class="relative hidden w-full group-hover/parent:block">
+              <div class="absolute right-14 text-black">
+                <div class="flex flex-col items-end">
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Xem nhanh</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H3m4 8l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Thêm vào giỏ hàng</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Yêu thích</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="food-img"
+              class="w-1/2 py-5"
+            />
+            <h2 class="text-xl text-black font-semibold mb-1 py-2">
+              Mì xào mắm tỏi 4
+            </h2>
+            <p class="text-black pb-1">American-inspired susihi roll</p>
+            <span class="text-xl font-bold text-red-500 pb-5">270,000đ</span>
+          </div>
+        </div>
+        <div class="w-1/3 flex-shrink-0">
+          <div
+            class="bg-gray-100 m-5 p-4 flex-shrink-0 flex flex-col items-center text-white text-center justify-center group/parent rounded-md border hover:border-red-500"
+          >
+            <div class="relative hidden w-full group-hover/parent:block">
+              <div class="absolute right-14 text-black">
+                <div class="flex flex-col items-end">
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Xem nhanh</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H3m4 8l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Thêm vào giỏ hàng</span
+                    >
+                  </button>
+                  <button
+                    class="bg-black text-white p-2 mb-3 rounded-full flex flex-row-reverse group/child"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
+                    </svg>
+                    <span class="px-3 hidden group-hover/child:block"
+                      >Yêu thích</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/monobite/assets/img/scapbot-favicon.webp"
+              alt="food-img"
+              class="w-1/2 py-5"
+            />
+            <h2 class="text-xl text-black font-semibold mb-1 py-2">
+              Mì xào mắm tỏi 5
+            </h2>
+            <p class="text-black pb-1">American-inspired susihi roll</p>
+            <span class="text-xl font-bold text-red-500 pb-5">270,000đ</span>
+          </div>
+        </div>
+      </div>
+
+      <button id="bestseller-prev" class="hidden">‹</button>
+      <button id="bestseller-next" class="hidden">›</button>
     </section>
-    <section class="bg-green-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Những món ngon không thể bỏ qua</div>
+
+    <!-- Fourth Section -->
+    <section
+      id="forth-section"
+      class="w-full shadow-2xl bg-center bg-cover bg-[url('/monobite/assets/img/scapbot-cover.webp')]"
+    >
+      <div class="flex flex-row">
+        <div class="flex-1 flex flex-col p-20 pl-10 mr-10">
+          <h3 class="text-2xl font-bold text-white mb-5">
+            Today Special Offer
+          </h3>
+          <h2 class="text-5xl font-bold text-white uppercase">
+            Bùng Nổ Vị Ngon
+          </h2>
+          <h1 class="text-8xl font-bold text-white uppercase">
+            Burger Sieuuu hot!
+          </h1>
+          <h3 class="text-2xl font-bold text-red-500 mt-5">
+            Sale off cuc soc 99%
+          </h3>
+        </div>
+        <div class="flex-1"></div>
+        <div class="flex-1 flex items-center justify-center">
+          <div
+            class="flex flex-col justify-center items-center w-[200px] h-[200px] bg-no-repeat bg-[url('https://biteblitz.monamedia.net/wp-content/plugins/pizzan-core/assets/img/discount_bg_9.svg')]"
+          >
+            <div
+              class="flex flex-col items-center border border-red-500 rounded-full p-3 border-[3px] mb-12 ml-3"
+            >
+              <p class="text-base font-semibold uppercase">Giảm ngay</p>
+              <h3 class="text-3xl font-bold text-red-500">32%</h3>
+              <p class="text-base font-semibold uppercase">Hôm nay</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="bg-purple-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Bùng Nổ Vị Ngon Burger</div>
+
+    <section class="bg-red-200 flex h-lvh justify-center items-center py-10">
+      <div class="justify-center">Tải xuống ứng dụng</div>
     </section>
-    <section class="bg-blue-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Thực Đơn Được Yêu Thích Nhất</div>
+    <section class="bg-yellow-200 flex h-lvh justify-center items-center py-10">
+      <div class="justify-center">Khách hàng đánh giá</div>
     </section>
-    <section class="bg-red-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Tải xuống ứng dụng</div>
-    </section>
-    <section class="bg-yellow-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Khách hàng đánh giá</div>
-    </section>
-    <section class="bg-green-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Tin tức đồ ăn nhanh</div>
-    </section>
-    <section class="bg-purple-200 flex h-lvh justify-center items-center">
-        <div class="justify-center">Footer</div>
-    </section>
-</body>
+
+    <!-- Fifth Section -->
+    <section></section>
+
+    <script src="/monobite/js/script.js"></script>
+  </body>
 </html>
